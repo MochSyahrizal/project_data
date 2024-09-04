@@ -1,0 +1,1 @@
+print("Pap cikappap preman preman uwooo")
