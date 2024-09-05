@@ -1,0 +1,8 @@
+# Abaikan direktori node_modules
+node_modules/
+
+# Abaikan semua file log
+*.log
+
+# Abaikan file konfigurasi VSCode
+.vscode/
