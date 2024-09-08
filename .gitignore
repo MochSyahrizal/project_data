@@ -1,6 +1,9 @@
 # Abaikan direktori node_modules
 node_modules/
 
+# Abaikan SampleData karena banyak file besar, malah nyampah
+SampleData/
+
 # Abaikan semua file log
 *.log
 
