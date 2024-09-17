@@ -48,7 +48,7 @@ plt.show()
 ```
 **RESULTS**
 
-![Visualization of Top Skills in Job Posting](2_Capstone_Project\images\skill_demand_all_data_roles.png)
+![2_Capstone_Project\images\skill_demand_all_data_roles.png](https://github.com/MochSyahrizal/project_data/blob/main/2_Capstone_Project/images/skill_demand_all_data_roles.png)
 
 
 ## Insights
