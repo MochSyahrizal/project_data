@@ -72,7 +72,18 @@ df_US = df[df['job_country'] == 'United States']
 - Data Cleaning, Analysis & Visualization
 
 ## The Analysis (Capstone Project)
-### 1. What are the most demanded skills for the top 3 most popular roles?
+### 1. Basic EDA
+view my notebook with detail steps here:
+[1_EDA_Intro.ipynb](2_Capstone_Project\1_EDA_Intro.ipynb)
+
+Result :
+![2_Capstone_Project\images\data_analyst_job_per_location.png](https://github.com/MochSyahrizal/project_data/blob/main/2_Capstone_Project/images/data_analyst_job_per_location.png)
+
+![2_Capstone_Project\images\eda2.png](https://github.com/MochSyahrizal/project_data/blob/main/2_Capstone_Project/images/eda2.png)
+
+![2_Capstone_Project\images\eda3.png](https://github.com/MochSyahrizal/project_data/blob/main/2_Capstone_Project/eda3.png)
+
+### 2. What are the most demanded skills for the top 3 most popular roles?
 To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills i should pay attention to depending on the role I'm targetting.
 
 view my notebook with detail steps here:
@@ -112,3 +123,35 @@ plt.show()
 - Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (72%) and Data Engineers (65%).
 - SQL is the most requested skill for Data Analysts and Data Scientist, with it in over half the job postings for both roles. For Data Engineers, Python is the most sought-after skill, appearing in 68^ of job postings.
 - data Engineer require more specialized technial skill (AWS, Azure, Spark) compared to Data Analysts and Data Scientis who are expected to be proficient in more general data management and analysis tools (Excels, Tableau).
+
+## 3. How are in-demand skills trending for Data Analysts?
+
+To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
+
+view my notebook with detail steps here:
+[3_Skills_Trend.ipynb](2_Capstone_Project\3_Skills_Trend.ipynb)
+
+### Visualize Data
+
+```python
+
+from matplotlib.ticker import PercentFormatter
+
+df_plot = df_DA_US_percent.iloc[:, :5]
+sns.lineplot(data=df_plot, dashes=False, legend='full', palette='tab10')
+
+plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+
+```
+
+### Results
+
+![2_Capstone_Project\images\trending_top_skills_da.png](https://github.com/MochSyahrizal/project_data/blob/main/2_Capstone_Project/images/trending_top_skills_da.png)  
+*Bar graph visualizing the trending top skills for data analysts in the US in 2023.*
+
+### Insights:
+- SQL remains the most consistently demanded skill throughout the year, although it shows a gradual decrease in demand.
+- Excel experienced a significant increase in demand starting around September, surpassing both Python and Tableau by the end of the year.
+- Both Python and Tableau show relatively stable demand throughout the year with some fluctuations but remain essential skills for data analysts. Power BI, while less demanded compared to the others, shows a slight upward trend towards the year's end.
